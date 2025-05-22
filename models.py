@@ -30,7 +30,6 @@ class User(Base):
     email = Column(String(100), unique=True, nullable=False, index=True)
     hashed_password = Column(String, nullable=False)
     role = Column(Enum(UserRole), default=UserRole.VIEWER)
-
     events = relationship("Event", back_populates="owner", cascade="all, delete")
     shared_events = relationship("EventShare", back_populates="user")
 
@@ -44,7 +43,6 @@ class Event(Base):
     end_time = Column(DateTime, nullable=False)
     recurrence = Column(Enum(RecurrenceEnum), default=RecurrenceEnum.NONE)
     owner_id = Column(Integer, ForeignKey("users.id"))
-
     owner = relationship("User", back_populates="events")
     shared_with = relationship("EventShare", back_populates="event")
     versions = relationship("EventVersion", back_populates="event")
@@ -57,7 +55,6 @@ class EventShare(Base):
     event_id = Column(Integer, ForeignKey("events.id"))
     user_id = Column(Integer, ForeignKey("users.id"))
     permission = Column(Enum(PermissionEnum), default=PermissionEnum.VIEWER)
-
     event = relationship("Event", back_populates="shared_with")
     user = relationship("User", back_populates="shared_events")
 
@@ -72,7 +69,6 @@ class EventVersion(Base):
     end_time = Column(DateTime)
     timestamp = Column(DateTime, default=datetime.utcnow)
     modified_by = Column(Integer, ForeignKey("users.id"))
-
     event = relationship("Event", back_populates="versions")
 
 class AuditLog(Base):
@@ -84,5 +80,4 @@ class AuditLog(Base):
     action = Column(String)
     timestamp = Column(DateTime, default=datetime.utcnow)
     details = Column(Text)
-
     event = relationship("Event", back_populates="audit_logs")
