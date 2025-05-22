@@ -1,7 +1,7 @@
 # NeoFi-backend-challenge
 
 An attempt at full-featured backend API built with FastAPI for a collaborative event management system.\
-##📦 Implemented Features:
+## 📦 Implemented Features:
  - **User Authentication** (Register, Login, Token Refresh, Logout)
  - **Role-Based Access Control (RBAC)** - Owner, Editor, Viewer
  - **Event CRUD** - Create, update, delete, and retrieve events
