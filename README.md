@@ -1,11 +1,11 @@
 # NeoFi-backend-challenge
 
 An attempt at full-featured backend API built with FastAPI for a collaborative event management system.\
-## Implemented Features:\
-  User Registration, Login, and Logout (JWT)\
-  Role-based Access Control (Owner, Editor, Viewer)\
-  CRUD for Events\
-  Event Sharing with Permissions\
-  Edit History & Collaboration Features\
-  Token Refresh\
-  Automated Tests with Pytest\
+## Implemented Features:
+  **User Authentication** (Register, Login, Token Refresh, Logout)\
+  **Role-Based Access Control (RBAC)** - Owner, Editor, Viewer\
+  **Event CRUD** - Create, update, delete, and retrieve events\
+ **Event Sharing** - Share events with other users with specific permissions\
+ **Edit History** - Track changes, rollback to previous versions\
+  **Token Refresh**\
+ 
