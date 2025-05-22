@@ -9,11 +9,7 @@ engine = create_engine(
 )
 
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
-
-# Base class for ORM models
 Base = declarative_base()
-
-# Dependency for getting DB session
 def get_db():
     db = SessionLocal()
     try:
