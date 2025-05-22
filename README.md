@@ -1,6 +1,6 @@
 # NeoFi-backend-challenge
 
-/An attempt at full-featured backend API built with FastAPI for a collaborative event management system.
+An attempt at full-featured backend API built with FastAPI for a collaborative event management system./
 Implemented Features:
   User Registration, Login, and Logout (JWT)
   Role-based Access Control (Owner, Editor, Viewer)
