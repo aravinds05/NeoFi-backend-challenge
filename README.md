@@ -18,7 +18,8 @@ An attempt at full-featured backend API built with FastAPI for a collaborative e
 
 ## Steps to follow
 
-1. Create a virtual envirnoment
+1. Create a virtual envirnoment \
+    python -m venv venv
 2. 📦Install the dependencies \
    pip install -r requirements.txt
 3. ⚙️ Run the Application\
