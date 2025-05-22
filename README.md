@@ -1,4 +1,4 @@
-# NeoFi-backend-challenge
+# NeoFi  backend challenge
 
 An attempt at full-featured backend API built with FastAPI for a collaborative event management system.\
 ## 📦 Implemented Features:
@@ -15,3 +15,11 @@ An attempt at full-featured backend API built with FastAPI for a collaborative e
 - Pydantic
 - JWT-based Authentication
 - HTTPx + Pytest for testing
+
+## Steps to follow
+
+1. Create a virtual envirnoment
+2. 📦Install the dependencies 
+   \pip install -r requirements.txt
+3. ⚙️ Run the Application
+   \uvicorn main:app --reload
