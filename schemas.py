@@ -18,9 +18,7 @@ class RecurrenceEnum(str, Enum):
     DAILY = "Daily"
     WEEKLY = "Weekly"
     MONTHLY = "Monthly"
-
 #user
-
 class UserBase(BaseModel):
     username: str
     email: EmailStr
@@ -38,8 +36,7 @@ class UserOut(BaseModel):
     class Config:
         from_attributes = True
 
-# -------------------- AUTH --------------------
-
+#auth
 class Token(BaseModel):
     access_token: str
     token_type: str
@@ -53,9 +50,7 @@ class LoginRequest(BaseModel):
 
 class RegisterRequest(UserCreate):
     pass
-
-# -------------------- EVENTS --------------------
-
+#events
 class EventBase(BaseModel):
     title: str
     description: Optional[str] = None
@@ -76,8 +71,7 @@ class EventOut(EventBase):
     class Config:
         from_attributes = True
 
-# -------------------- SHARING --------------------
-
+#sharing
 class ShareEvent(BaseModel):
     user_id: int
     permission: PermissionEnum
@@ -98,8 +92,6 @@ class PermissionOut(BaseModel):
     class Config:
         from_attributes = True
 
-# -------------------- EVENT VERSIONING --------------------
-
 class EventVersionOut(BaseModel):
     id: int
     event_id: int
@@ -113,8 +105,7 @@ class EventVersionOut(BaseModel):
     class Config:
         from_attributes = True
 
-# -------------------- AUDIT LOG --------------------
-
+# log
 class AuditLogOut(BaseModel):
     id: int
     user_id: int
